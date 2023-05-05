@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.sass'
+import './styles/index.sass'
 import {Link, Route, Routes} from "react-router-dom";
 import {AboutPageAsync} from "./pages/AboutPage/AboutPage.async";
 import {MainPageAsync} from "./pages/MainPage/MainPage.async";
