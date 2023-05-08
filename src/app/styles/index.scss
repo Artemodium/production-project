@@ -1,7 +1,7 @@
 @import "rerset";
-@import "viriables/global";
-@import "themes/normal";
-@import "themes/dark";
+@import "./viriables/global";
+@import "./themes/normal";
+@import "./themes/dark";
 
 .app{
   font: var(--font-m);
