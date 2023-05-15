@@ -8,6 +8,7 @@ declare module '*.sass' {
 
 declare module '*.svg'
 declare module '*.png'
+declare module '*.scss'
 
 declare module '*.svg' {
     import React from 'react';
