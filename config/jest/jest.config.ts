@@ -15,13 +15,15 @@ export default {
 
     // Automatically clear mock calls, instances and results before every test
     clearMocks: true,
-    rootDir: '../../',
     testEnvironment: 'jsdom',
     coveragePathIgnorePatterns: [
         '\\\\node_modules\\\\',
     ],
     moduleDirectories: [
         'node_modules',
+    ],
+    modulePaths: [
+        '<rootDir>src',
     ],
     moduleFileExtensions: [
         'js',
@@ -34,7 +36,11 @@ export default {
     testMatch: [
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
     ],
-
+    rootDir: '../../',
+    setupFilesAfterEnv: ['<rootDir>/config/jest/jest-setup.ts'],
+    moduleNameMapper: {
+        '\\.s?css$': 'identity-obj-proxy',
+    },
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
 
