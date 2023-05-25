@@ -30,7 +30,7 @@
     border: none;
 }
 
-.square{
+.square {
     padding: 0;
 }
 
@@ -39,24 +39,24 @@
     height: var(--font-line-m);
 }
 
-.square.size_l{
+.square.size_l {
     width: var(--font-line-l);
     height: var(--font-line-l);
 }
 
-.square.size_xl{
+.square.size_xl {
     width: var(--font-line-xl);
     height: var(--font-line-xl);
 }
 
-.size_m{
+.size_m {
     font: var(--font-m);
 }
 
-.size_l{
+.size_l {
     font: var(--font-l);
 }
 
-.size_xl{
+.size_xl {
     font: var(--font-xl);
 }
