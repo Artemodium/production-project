@@ -44,9 +44,11 @@
 
 .collapsed {
     width: var(--sidebar-width-collapsed);
+
     .switchers {
         flex-direction: column;
     }
+
     .link {
         opacity: 0;
         transition: 0.2s opacity;
