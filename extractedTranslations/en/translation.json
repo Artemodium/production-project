@@ -5,6 +5,8 @@
       "": ""
     }
   },
+  "decrement": "decrement",
+  "increment": "increment",
   "Бросить ошибку": "Throw error",
   "Войти": "Войти",
   "Главная страница": "Main",
