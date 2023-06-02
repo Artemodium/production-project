@@ -1,7 +1,7 @@
-import React, { Suspense } from 'react';
-import { Route, Routes } from 'react-router-dom';
-import { routeConfig } from 'shared/config/routeConfig/routeConfig';
-import { PageLoader } from 'widgets/PageLoader/PageLoader';
+import React, { Suspense } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import { routeConfig } from 'shared/config/routeConfig/routeConfig'
+import { PageLoader } from 'widgets/PageLoader/PageLoader'
 
 const AppRouter = () => (
     <Routes>
@@ -19,6 +19,6 @@ const AppRouter = () => (
             />
         ))}
     </Routes>
-);
+)
 
-export default AppRouter;
+export default AppRouter

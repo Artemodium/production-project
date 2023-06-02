@@ -1,8 +1,8 @@
-import type { ComponentMeta, ComponentStory } from '@storybook/react';
-import 'app/styles/index.scss';
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from 'app/providers/ThemeProvider';
-import AboutPage from './AboutPage';
+import type { ComponentMeta, ComponentStory } from '@storybook/react'
+import 'app/styles/index.scss'
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
+import { Theme } from 'app/providers/ThemeProvider'
+import AboutPage from './AboutPage'
 
 export default {
     title: 'pages/AboutPage',
@@ -13,14 +13,14 @@ export default {
     args: {
         to: '/',
     },
-} as ComponentMeta<typeof AboutPage>;
+} as ComponentMeta<typeof AboutPage>
 
-const Template: ComponentStory<typeof AboutPage> = (args) => <AboutPage {...args} />;
+const Template: ComponentStory<typeof AboutPage> = (args) => <AboutPage {...args} />
 
-export const Normal = Template.bind({});
-Normal.args = { };
-Normal.decorators = [ThemeDecorator(Theme.LIGHT)];
+export const Normal = Template.bind({})
+Normal.args = { }
+Normal.decorators = [ThemeDecorator(Theme.LIGHT)]
 
-export const Dark = Template.bind({});
-Dark.args = { };
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
+export const Dark = Template.bind({})
+Dark.args = { }
+Dark.decorators = [ThemeDecorator(Theme.DARK)]
