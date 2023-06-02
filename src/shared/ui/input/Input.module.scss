@@ -13,6 +13,7 @@
     width: 100%;
     color: transparent;
     text-shadow: 0 0 0 var(--primary-color);
+
     &:focus {
         outline: none;
     }
@@ -37,9 +38,11 @@
     0% {
         opacity: 0;
     }
+
     50% {
         opacity: 0.01;
     }
+
     100% {
         opacity: 1;
     }
