@@ -9,6 +9,9 @@ declare module '*.sass' {
 declare module '*.svg'
 declare module '*.png'
 declare module '*.scss'
+declare module '*.ttf'
+declare module '*.woff'
+declare module '*.woff2'
 
 declare module '*.svg' {
     import React from 'react'
