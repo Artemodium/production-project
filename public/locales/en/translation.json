@@ -11,8 +11,11 @@
   "Главная страница": "Main",
   "Короткое наименование": "En",
   "Войти": "log in",
+  "Выйти": "log out",
   "Увеличить": "increment",
   "Уменьшить": "decrement",
   "Введите имя пользователя": "Enter username",
-  "Введите пароль": "Enter password"
+  "Введите пароль": "Enter password",
+  "Форма авторизации": "Authorization form",
+  "Ошибка": "Error"
 }
