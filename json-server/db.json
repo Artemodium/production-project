@@ -16,5 +16,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "name": "Артем",
+    "lastname": "Рыбкин",
+    "age": "43",
+    "currency":  "RUB",
+    "country":  "Russia",
+    "city":  "EKB",
+    "username":  "admin",
+    "avatar":  "https://avatarko.ru/kartinka/24921"
+  }
 }

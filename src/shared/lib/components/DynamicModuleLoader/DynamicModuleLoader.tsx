@@ -11,7 +11,7 @@ type ReducerListEntry = [StateSchemaKey, Reducer]
 
 interface DynamicModuleLoaderProps {
     reducers: ReducerList
-    removeAfterUnmount: boolean
+    removeAfterUnmount?: boolean
 }
 
 export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (props) => {
@@ -20,6 +20,7 @@ export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (props) => {
         reducers,
         removeAfterUnmount,
     } = props
+
     const dispatch = useDispatch()
     const store = useStore() as ReduxStoreWithManager
 
