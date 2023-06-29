@@ -1,7 +1,7 @@
 import { Country, Currency } from 'shared/const/common'
 
 export interface Profile {
-    'name': string,
+    'first': string,
     'lastname': string,
     'age': number,
     'currency': Currency,

@@ -23,8 +23,8 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
             className={
                 classNames(
                     cls.Sidebar,
-                    { [cls.collapsed]: collapsed },
                     [className],
+                    { [cls.collapsed]: collapsed },
                 )
             }
         >
