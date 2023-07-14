@@ -8,5 +8,10 @@
   "Ваш возраст": "Your age",
   "Ваш город": "Your city",
   "Ваше имя пользователя": "Your username",
-  "Ваш аватар": "Your avatar"
+  "Ваш аватар": "Your avatar",
+  "Ошибка сервера": "Server error",
+  "Некорректная страна": "Incorrect country",
+  "Некорректный возраст": "Incorrect age",
+  "Имя и фамилия обязательны": "incorrect user data",
+  "Нет данных": "No data"
 }
