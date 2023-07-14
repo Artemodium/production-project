@@ -1,4 +1,4 @@
-import { classNames, Mods } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames'
 import { memo } from 'react'
 import cls from './Text.module.scss'
 
@@ -27,12 +27,12 @@ export const Text = memo((props: TextProps) => {
         text,
         title,
         theme = TextTheme.PRIMARY,
-        align = TextAlign.LEFT
+        align = TextAlign.LEFT,
     } = props
 
     const mods: Mods = {
         [cls[theme]]: true,
-        [cls[align]]: true
+        [cls[align]]: true,
     }
 
     return (

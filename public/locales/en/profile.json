@@ -4,5 +4,9 @@
   "Ваше имя": "Your name",
   "Ваша фамилия": "Your lastname",
   "Ошибка загрузки профиля": "Profile loading error",
-  "Попробуйте обновить страницу": "Please try to update page"
+  "Попробуйте обновить страницу": "Please try to update page",
+  "Ваш возраст": "Your age",
+  "Ваш город": "Your city",
+  "Ваше имя пользователя": "Your username",
+  "Ваш аватар": "Your avatar"
 }

@@ -26,12 +26,13 @@
     }
   ],
   "profile": {
-    "first": "Тимур",
-    "lastname": "Ульби",
+    "first": "Тимур1",
+    "lastname": "Ульби2",
     "age": 22,
-    "currency": "RUB",
-    "country": "Belarus",
-    "city": "Moscow",
-    "username": "admin"
+    "currency": "USD",
+    "country": "Russia",
+    "city": "Moscowa",
+    "username": "admin",
+    "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
   }
 }
