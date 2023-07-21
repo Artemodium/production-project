@@ -9,7 +9,7 @@ const MainPage = () => {
         setValue(value)
     }
     return (
-        <div style={{ color: 'red' }}>
+        <div>
             <BugButton />
             {t('Главная страница')}
         </div>
