@@ -18,7 +18,12 @@
   "Введите пароль": "Enter password",
   "Форма авторизации": "Authorization form",
   "Ошибка": "Error",
-  "ВАШ ПРОФИЛЬ": "PROFILE PAGE",
+  "Ваш профиль": "Profile page",
+  "Отменить": "Cancel",
+  "Сохранить": "Save",
   "Укажите валюту": "Change currency",
-  "Укажите страну": "Change country"
+  "Укажите страну": "Change country",
+  "Статьи": "Articles",
+  "Редактировать": "Edit",
+  "Профиль": "Profile"
 }
