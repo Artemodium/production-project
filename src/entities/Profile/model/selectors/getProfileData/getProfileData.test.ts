@@ -1,7 +1,6 @@
 import { StateSchema } from 'app/providers/StoreProvider'
 import { Country } from 'entities/Country'
 import { Currency } from 'entities/Currency'
-import avatar from 'shared/assets/tests/avatar.png'
 import { getProfileData } from './getProfileData'
 
 describe('getProfileData.test', () => {
