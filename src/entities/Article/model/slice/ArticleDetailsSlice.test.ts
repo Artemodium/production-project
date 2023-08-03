@@ -1,7 +1,10 @@
-import { TestAsyncThunk } from 'shared/lib/tests/testAsyncThunk/testAsyncThunk'
-import { Article } from 'entities/Article'
+import {
+    Article,
+    ArticleDetailsSchema,
+    articleDetailsReducer,
+} from 'entities/Article'
+import { fetchArticleById } from 'entities/Article/model/services/fetchArticleById/fetchArticleById'
 import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article'
-import { fetchArticleById } from './fetchArticleById'
 
 const data: Article = {
     id: '1',
@@ -25,20 +28,44 @@ const data: Article = {
     ],
 }
 
-describe('fetchArticleById.test', () => {
-    test('success', async () => {
-        const thunk = new TestAsyncThunk(fetchArticleById)
-        thunk.api.get.mockReturnValue(Promise.resolve({ data }))
-        const result = await thunk.callThunk('1')
-
-        expect(thunk.api.get).toHaveBeenCalled()
-        expect(result.meta.requestStatus).toBe('fulfilled')
-        expect(result.payload).toBe(data)
+describe('ArticleDetailsSlice.test', () => {
+    test('test ArticleDetails service pending', () => {
+        const state: DeepPartial<ArticleDetailsSchema> = {
+            error: undefined,
+            isLoading: false,
+        }
+        expect(articleDetailsReducer(
+            state as ArticleDetailsSchema,
+            fetchArticleById.pending,
+        )).toEqual({
+            error: undefined,
+            isLoading: true,
+        })
     })
-    test('error', async () => {
-        const thunk = new TestAsyncThunk(fetchArticleById)
-        thunk.api.get.mockReturnValue(Promise.resolve({ status: 403 }))
-        const result = await thunk.callThunk('1')
-        expect(result.meta.requestStatus).toBe('rejected')
+    test('test ArticleDetails service fulfilled', () => {
+        const state: DeepPartial<ArticleDetailsSchema> = {
+            isLoading: true,
+            data: undefined,
+        }
+        expect(articleDetailsReducer(
+            state as ArticleDetailsSchema,
+            fetchArticleById.fulfilled(data, '1', ''),
+        )).toEqual({
+            isLoading: false,
+            data,
+        })
+    })
+    test('test ArticleDetails service rejected', () => {
+        const state: DeepPartial<ArticleDetailsSchema> = {
+            isLoading: true,
+            error: undefined,
+        }
+        expect(articleDetailsReducer(
+            state as ArticleDetailsSchema,
+            fetchArticleById.rejected,
+        )).toEqual({
+            error: undefined,
+            isLoading: false,
+        })
     })
 })
