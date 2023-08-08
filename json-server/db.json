@@ -19,7 +19,9 @@
       "img": "https://cdn2.iconfinder.com/data/icons/designer-skills/128/code-programming-javascript-software-develop-command-language-512.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -126,6 +128,36 @@
       "text": "some little comment",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "212",
+      "id": "JrX2cc4"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "212 sds",
+      "id": "Ij57b0N"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "bvcxv",
+      "id": "tTDDUW1"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "asa",
+      "id": "Pl3xjC2"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "hello, world",
+      "id": "5dlzZyJ"
     }
   ],
   "users": [
@@ -140,18 +172,32 @@
       "id": "2",
       "username": "user",
       "password": "123",
-      "role":  "USER",
+      "role": "USER",
       "avatar": "https://mykaleidoscope.ru/x/uploads/posts/2022-09/1663671765_4-mykaleidoscope-ru-p-zloi-khaker-vkontakte-4.jpg"
     }
   ],
-  "profile": {
-    "first": "Тимур1",
-    "lastname": "Ульби2",
-    "age": 22,
-    "currency": "USD",
-    "country": "Russia",
-    "city": "Moscowa",
-    "username": "admin",
-    "avatar": "https://e7.pngegg.com/pngimages/759/88/png-clipart-computer-icons-arrow-success-angle-triangle.png"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Тимур1",
+      "lastname": "Ульби2",
+      "age": 22,
+      "currency": "USD",
+      "country": "Russia",
+      "city": "Moscowa",
+      "username": "admin",
+      "avatar": "https://e7.pngegg.com/pngimages/759/88/png-clipart-computer-icons-arrow-success-angle-triangle.png"
+    },
+    {
+      "id": "2",
+      "first": "ArtemS",
+      "lastname": "TC",
+      "age": 42,
+      "currency": "USD",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "user",
+      "avatar": "https://mykaleidoscope.ru/x/uploads/posts/2022-09/1663671765_4-mykaleidoscope-ru-p-zloi-khaker-vkontakte-4.jpg"
+    }
+  ]
 }
