@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 import { memo, useCallback } from 'react'
 import { ArticleDetails } from 'entities/Article'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { Text } from 'shared/ui/Text/Text'
 import { CommentList } from 'entities/Comment'
 import { DynamicModuleLoader, ReducerList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
@@ -10,9 +10,11 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { fetchCommentByArticleId } from 'pages/ArticleDetailsPage'
 import { AddCommentForm } from 'features/addCommentForm'
+import { Button, ButtonTheme } from 'shared/ui/Button/Button'
+import { RoutPath } from 'shared/config/routeConfig/routeConfig'
 import {
     addCommentForArticle,
-} from 'pages/ArticleDetailsPage/model/services/addCommentForArticle/addCommentForArticle'
+} from '../../model/services/addCommentForArticle/addCommentForArticle'
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments'
 import { articleDetailsCommentsReducer, getArticleComments } from '../../model/slices/articleDetailsCommentsSlice'
 import cls from './ArticleDetailsPage.module.scss'
@@ -29,9 +31,12 @@ export const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     const { t } = useTranslation('article')
     const { id } = useParams<{id: string}>()
     const dispatch = useDispatch()
+    const navigate = useNavigate()
     const comments = useSelector(getArticleComments.selectAll)
     const commentsIsLoading = useSelector(getArticleCommentsIsLoading)
-
+    const onBackToList = useCallback(() => {
+        navigate(RoutPath.articles)
+    }, [navigate])
     const onSendComment = useCallback((text: string) => {
         dispatch(addCommentForArticle(text))
     }, [dispatch])
@@ -50,6 +55,9 @@ export const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     return (
         <DynamicModuleLoader reducers={reducersList} removeAfterUnmount>
             <div className={classNames(cls.ArticleDetailsPage, [className], {})}>
+                <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
+                    {t('Назад к списку')}
+                </Button>
                 <ArticleDetails id={id} />
                 <Text className={cls.commentTitle} title={t('Комментарии')} />
                 <AddCommentForm onSendComment={onSendComment} />

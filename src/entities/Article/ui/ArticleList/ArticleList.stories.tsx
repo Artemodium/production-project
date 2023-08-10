@@ -1,16 +1,8 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
-import { Article } from 'entities/Article'
+import 'app/styles/index.scss'
+import { Article, ArticleView } from 'entities/Article'
 import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article'
-import { ArticleDetails } from './ArticleDetails'
-
-export default {
-    title: 'entities/Article/ArticleDetails',
-    component: ArticleDetails,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-} as ComponentMeta<typeof ArticleDetails>
+import { ArticleList } from './ArticleList'
 
 const article: Article = {
     id: '1',
@@ -112,28 +104,40 @@ const article: Article = {
     ],
 }
 
-const Template: ComponentStory<typeof ArticleDetails> = (args) => <ArticleDetails {...args} />
-
-export const Normal = Template.bind({})
-Normal.args = {}
-Normal.decorators = [StoreDecorator({
-    articleDetails: {
-        data: article,
+export default {
+    title: 'entities/Article/ArticleList',
+    component: ArticleList,
+    argTypes: {
+        backgroundColor: { control: 'color' },
     },
-})]
+} as ComponentMeta<typeof ArticleList>
 
-export const withLoading = Template.bind({})
-withLoading.args = {}
-withLoading.decorators = [StoreDecorator({
-    articleDetails: {
-        isLoading: true,
-    },
-})]
+const Template: ComponentStory<typeof ArticleList> = (args) => <ArticleList {...args} />
 
-export const withError = Template.bind({})
-withError.args = {}
-withError.decorators = [StoreDecorator({
-    articleDetails: {
-        error: 'error loading',
-    },
-})]
+export const BigNormal = Template.bind({})
+BigNormal.args = {
+    isLoading: false,
+    articles: new Array(8).fill(article),
+    view: ArticleView.BIG,
+}
+
+export const BigLoading = Template.bind({})
+BigLoading.args = {
+    isLoading: true,
+    articles: [article],
+    view: ArticleView.BIG,
+}
+
+export const SmallNormal = Template.bind({})
+SmallNormal.args = {
+    isLoading: false,
+    articles: new Array(8).fill(article),
+    view: ArticleView.SMALL,
+}
+
+export const SmallLoading = Template.bind({})
+SmallLoading.args = {
+    isLoading: true,
+    articles: [article],
+    view: ArticleView.SMALL,
+}
