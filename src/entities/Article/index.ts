@@ -10,3 +10,4 @@ export { articleDetailsReducer, articleDetailsActions } from './model/slice/Arti
 export { ArticleList } from './ui/ArticleList/ArticleList'
 
 export { ArticleTextBlockComponent } from './ui/ArticleTextBlockComponent/ArticleTextBlockComponent'
+export { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelector'
