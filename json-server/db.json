@@ -86,7 +86,7 @@
           ]
         },
         {
-          "id": "7",
+          "id": "27",
           "type": "TEXT",
           "title": "Заголовок этого блока",
           "paragraphs": [
@@ -95,13 +95,13 @@
           ]
         },
         {
-          "id": "8",
+          "id": "28",
           "type": "IMAGE",
           "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
           "title": "Рисунок 1 - скриншот сайта"
         },
         {
-          "id": "9",
+          "id": "29",
           "type": "TEXT",
           "title": "Заголовок этого блока",
           "paragraphs": [
@@ -380,7 +380,7 @@
           ]
         },
         {
-          "id": "7",
+          "id": "10",
           "type": "TEXT",
           "title": "Заголовок этого блока",
           "paragraphs": [
@@ -389,13 +389,13 @@
           ]
         },
         {
-          "id": "8",
+          "id": "11",
           "type": "IMAGE",
           "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
           "title": "Рисунок 1 - скриншот сайта"
         },
         {
-          "id": "9",
+          "id": "12",
           "type": "TEXT",
           "title": "Заголовок этого блока",
           "paragraphs": [
