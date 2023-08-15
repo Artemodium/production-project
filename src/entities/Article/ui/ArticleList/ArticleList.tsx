@@ -1,4 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames'
+import { Text, TextSize } from 'shared/ui/Text/Text'
 import { useTranslation } from 'react-i18next'
 import { Article, ArticleView } from 'entities/Article'
 import { ArticleListItemSkeleton } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton'
@@ -35,6 +36,14 @@ export const ArticleList = (props: ArticleListProps) => {
             key={article.id}
         />
     )
+
+    if (!isLoading && !articles.length) {
+        return (
+            <div className={classNames(cls.ArticleList, [className, cls[view]], {})}>
+                <Text title={t('Статьи не найдены')} size={TextSize.L} />
+            </div>
+        )
+    }
 
     return (
         <div className={classNames(cls.ArticleList, [className, cls[view]], {})}>
