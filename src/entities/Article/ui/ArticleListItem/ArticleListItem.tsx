@@ -4,11 +4,11 @@ import { Text } from 'shared/ui/Text/Text'
 import { Icon } from 'shared/ui/Icon/Icon'
 import EyeIcon from 'shared/assets/icons/ant-design_eye.svg'
 import { Card } from 'shared/ui/Card/Card'
+import { AppLink } from 'shared/ui/AppLink/AppLink'
 import { useHover } from 'shared/lib/hooks/useHover/useHover'
 import { Avatar } from 'shared/ui/Avatar/Avatar'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
-import { useCallback } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { HTMLAttributeAnchorTarget } from 'react'
 import { RoutPath } from 'shared/config/routeConfig/routeConfig'
 import {
     Article, ArticleBlockType, ArticleTextBlock, ArticleView,
@@ -20,15 +20,14 @@ interface ArticleListItemProps {
     className?: string
     article: Article
     view: ArticleView
+    target?: HTMLAttributeAnchorTarget
 }
 
 export const ArticleListItem = (props: ArticleListItemProps) => {
-    const { className, article, view } = props
+    const {
+        className, article, view, target,
+    } = props
     const { t } = useTranslation()
-    const navigate = useNavigate()
-    const onOpenArticle = useCallback(() => {
-        navigate(RoutPath.articles_details + article.id)
-    }, [article.id, navigate])
     const [isHover, bindHover] = useHover()
     const type = <Text text={article.type.join(', ')} className={cls.types} />
     const views = (
@@ -56,9 +55,15 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
                         <ArticleTextBlockComponent block={textBlocks} className={cls.textBlock} />
                     )}
                     <div className={cls.footer}>
-                        <Button theme={ButtonTheme.OUTLINE} onClick={onOpenArticle}>
-                            {t('Читать далее')}
-                        </Button>
+                        <AppLink
+                            target={target}
+                            to={RoutPath.articles_details + article.id}
+                        >
+                            <Button theme={ButtonTheme.OUTLINE}>
+                                {t('Читать далее')}
+                            </Button>
+                        </AppLink>
+
                         {views}
                     </div>
                 </Card>
@@ -67,8 +72,13 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
     }
 
     return (
-        <div {...bindHover} className={classNames(cls.ArticleListItem, [className, cls[view]], {})}>
-            <Card className={cls.card} onClick={onOpenArticle}>
+        <AppLink
+            target={target}
+            to={RoutPath.articles_details + article.id}
+            {...bindHover}
+            className={classNames(cls.ArticleListItem, [className, cls[view]], {})}
+        >
+            <Card className={cls.card}>
                 <div className={cls.imageWrapper}>
                     <img src={article.img} className={cls.img} alt={article.title} />
                     <Text text={article.createdAt} className={cls.date} />
@@ -79,6 +89,6 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
                 </div>
                 <Text text={article.title} className={cls.title} />
             </Card>
-        </div>
+        </AppLink>
     )
 }
