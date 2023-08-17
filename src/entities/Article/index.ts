@@ -15,3 +15,4 @@ export { ArticleTextBlockComponent } from './ui/ArticleTextBlockComponent/Articl
 export { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelector'
 export { ArticlesSortSelector } from './ui/ArticlesSortSelector/ArticlesSortSelector'
 export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs'
+export { getArticleDetailsData } from './model/selectors/articleDetails'

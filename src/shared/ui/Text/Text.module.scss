@@ -8,11 +8,21 @@
 
 .error {
     .title {
-        color: var(--red-dark);
+        color: var(--red-light);
     }
 
     .text {
-        color: var(--red-light);
+        color: var(--red-dark);
+    }
+}
+
+.inverted {
+    .title {
+        color: var(--inverted-primary-color);
+    }
+
+    .text {
+        color: var(--inverted-secondary-color);
     }
 }
 

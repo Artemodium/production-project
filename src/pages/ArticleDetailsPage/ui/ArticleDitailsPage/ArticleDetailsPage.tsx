@@ -17,6 +17,7 @@ import {
     getArticleRecommendationsError,
     getArticleRecommendationsIsLoading,
 } from 'pages/ArticleDetailsPage/model/selectors/recommendations'
+import { ArticleDetailsPageHeader } from 'pages/ArticleDetailsPage/ui/ArticleDetailsPageHeader/AticleDetailsPageHeader'
 import { articleDetailsPageReducer } from '../../model/slices'
 import {
     fetchArticlesRecommendations,
@@ -41,16 +42,11 @@ export const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     const { t } = useTranslation('article')
     const { id } = useParams<{id: string}>()
     const dispatch = useDispatch()
-    const navigate = useNavigate()
     const comments = useSelector(getArticleComments.selectAll)
     const commentsIsLoading = useSelector(getArticleCommentsIsLoading)
     const recommendations = useSelector(getArticleDetailsRecommendations.selectAll)
     const recommendationsIsLoading = useSelector(getArticleRecommendationsIsLoading)
     const recommendationsError = useSelector(getArticleRecommendationsError)
-
-    const onBackToList = useCallback(() => {
-        navigate(RoutPath.articles)
-    }, [navigate])
 
     const onSendComment = useCallback((text: string) => {
         dispatch(addCommentForArticle(text))
@@ -71,9 +67,7 @@ export const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     return (
         <DynamicModuleLoader reducers={reducersList} removeAfterUnmount>
             <Page className={classNames(cls.ArticleDetailsPage, [className], {})}>
-                <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
-                    {t('Назад к списку')}
-                </Button>
+                <ArticleDetailsPageHeader />
                 <ArticleDetails id={id} />
                 <Text
                     className={cls.commentTitle}
