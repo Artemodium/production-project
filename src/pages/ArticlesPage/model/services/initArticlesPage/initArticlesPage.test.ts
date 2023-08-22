@@ -1,6 +1,6 @@
 import { TestAsyncThunk } from 'shared/lib/tests/testAsyncThunk/testAsyncThunk'
-import { fetchArticlesList } from 'pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList'
 import { useSearchParams } from 'react-router-dom'
+import { fetchArticlesList } from '../fetchArticlesList/fetchArticlesList'
 import { initArticlesPage } from './initArticlesPage'
 
 jest.mock('../fetchArticlesList/fetchArticlesList')

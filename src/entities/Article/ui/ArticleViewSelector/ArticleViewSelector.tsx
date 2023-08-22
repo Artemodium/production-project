@@ -1,9 +1,9 @@
 import { classNames } from 'shared/lib/classNames/classNames'
-import { ArticleView } from 'entities/Article'
 import TiledIcon from 'shared/assets/icons/fe_tiled.svg'
 import ListIcon from 'shared/assets/icons/bi_list.svg'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { Icon } from 'shared/ui/Icon/Icon'
+import { ArticleView } from '../../../Article'
 import cls from './ArticleViewSelector.module.scss'
 
 interface ArticleViewSelectorProps {

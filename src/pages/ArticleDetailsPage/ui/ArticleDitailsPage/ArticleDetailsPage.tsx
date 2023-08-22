@@ -2,22 +2,20 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 import { memo, useCallback } from 'react'
 import { ArticleDetails, ArticleList } from 'entities/Article'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { Text, TextSize } from 'shared/ui/Text/Text'
 import { CommentList } from 'entities/Comment'
 import { DynamicModuleLoader, ReducerList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { useDispatch, useSelector } from 'react-redux'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
-import { fetchCommentByArticleId } from 'pages/ArticleDetailsPage'
 import { AddCommentForm } from 'features/addCommentForm'
-import { Button, ButtonTheme } from 'shared/ui/Button/Button'
-import { RoutPath } from 'shared/config/routeConfig/routeConfig'
 import { Page } from 'widgets/Page/Page'
 import {
     getArticleRecommendationsError,
     getArticleRecommendationsIsLoading,
-} from 'pages/ArticleDetailsPage/model/selectors/recommendations'
-import { ArticleDetailsPageHeader } from 'pages/ArticleDetailsPage/ui/ArticleDetailsPageHeader/AticleDetailsPageHeader'
+} from '../../model/selectors/recommendations'
+import { ArticleDetailsPageHeader } from '../../ui/ArticleDetailsPageHeader/AticleDetailsPageHeader'
+import { fetchCommentByArticleId } from '../../model/services/fetchCommentByArticleId/fetchCommentByArticleId'
 import { articleDetailsPageReducer } from '../../model/slices'
 import {
     fetchArticlesRecommendations,

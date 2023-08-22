@@ -1,10 +1,10 @@
+import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById'
+import { ArticleBlockType, ArticleType } from '../types/article'
 import {
     Article,
     ArticleDetailsSchema,
     articleDetailsReducer,
-} from 'entities/Article'
-import { fetchArticleById } from 'entities/Article/model/services/fetchArticleById/fetchArticleById'
-import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article'
+} from '../../../Article'
 
 const data: Article = {
     id: '1',

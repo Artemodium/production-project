@@ -1,9 +1,9 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Text, TextSize } from 'shared/ui/Text/Text'
 import { useTranslation } from 'react-i18next'
-import { Article, ArticleView } from 'entities/Article'
-import { ArticleListItemSkeleton } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton'
 import { HTMLAttributeAnchorTarget, memo } from 'react'
+import { Article, ArticleView } from '../../../Article'
+import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton'
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
 import cls from './ArticleList.module.scss'
 

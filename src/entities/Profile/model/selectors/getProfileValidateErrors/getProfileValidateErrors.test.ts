@@ -1,5 +1,5 @@
 import { StateSchema } from 'app/providers/StoreProvider'
-import { ValidateProfileErrors } from 'entities/Profile'
+import { ValidateProfileErrors } from '../../type/profile'
 import { getProfileValidateErrors } from './getProfileValidateErrors'
 
 describe('getProfileValidateErrors.test', () => {

@@ -1,6 +1,6 @@
-import { getProfileData } from 'entities/Profile/model/selectors/getProfileData/getProfileData'
-import { getProfileError } from 'entities/Profile/model/selectors/getProfileError/getProfileError'
-import { getProfileIsLoading } from 'entities/Profile/model/selectors/getProfileIsLoading/getProfileIsLoading'
+import { getProfileError } from './model/selectors/getProfileError/getProfileError'
+import { getProfileIsLoading } from './model/selectors/getProfileIsLoading/getProfileIsLoading'
+import { getProfileData } from './model/selectors/getProfileData/getProfileData'
 
 export {
     Profile,
