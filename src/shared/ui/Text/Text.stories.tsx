@@ -20,6 +20,13 @@ Primary.args = {
     text: 'text',
 }
 
+export const SizeS = Template.bind({})
+SizeS.args = {
+    title: 'Title',
+    text: 'text',
+    size: TextSize.S,
+}
+
 export const SizeM = Template.bind({})
 SizeM.args = {
     title: 'Title',
