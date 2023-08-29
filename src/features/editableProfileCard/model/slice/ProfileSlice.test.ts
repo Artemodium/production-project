@@ -8,7 +8,7 @@ import {
 import {
     ProfileSchema,
     ValidateProfileErrors,
-} from '../type/profile'
+} from '../types/editableProfileCardSchema'
 
 const data = {
     username: 'admin',

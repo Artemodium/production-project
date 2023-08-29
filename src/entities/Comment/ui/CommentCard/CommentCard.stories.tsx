@@ -18,10 +18,11 @@ Normal.args = {
         text: 'hello? world',
         user: { id: '1', username: 'dsgs' },
     },
+    isLoading: false,
 }
 
 export const Loading = Template.bind({})
-Normal.args = {
+Loading.args = {
     comment: {
         id: '1',
         text: 'hello world',

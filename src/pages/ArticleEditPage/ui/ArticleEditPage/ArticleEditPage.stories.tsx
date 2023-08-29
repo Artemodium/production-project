@@ -3,7 +3,7 @@ import 'app/styles/index.scss'
 import ArticleEditPage from './ArticleEditPage'
 
 export default {
-    title: 'features/ArticleEditPage',
+    title: 'pages/ArticleEditPage',
     component: ArticleEditPage,
     argTypes: {
         backgroundColor: { control: 'color' },

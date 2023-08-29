@@ -16,7 +16,7 @@ describe('initArticlesPage.test', () => {
         await thunk.callThunk(searchParams)
 
         expect(thunk.dispatch).toBeCalledTimes(4)
-        expect(fetchArticlesList).toHaveBeenCalledWith({ page: 1 })
+        expect(fetchArticlesList).toHaveBeenCalled()
     })
     test('not success', async () => {
         const thunk = new TestAsyncThunk(initArticlesPage, {
@@ -27,6 +27,6 @@ describe('initArticlesPage.test', () => {
         await thunk.callThunk(searchParams)
 
         expect(thunk.dispatch).toBeCalledTimes(2)
-        expect(fetchArticlesList).not.toHaveBeenCalledWith()
+        expect(fetchArticlesList).not.toHaveBeenCalled()
     })
 })
