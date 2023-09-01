@@ -1,5 +1,6 @@
 import { Country } from 'entities/Country'
 import { Currency } from 'entities/Currency'
+import { ValidateProfileErrors } from '../consts/consts'
 import { updateProfileData } from '../service/updateProfileData/updateProfileData'
 import {
     profileReducer,
@@ -7,7 +8,7 @@ import {
 } from '../slice/ProfileSlice'
 import {
     ProfileSchema,
-    ValidateProfileErrors,
+
 } from '../types/editableProfileCardSchema'
 
 const data = {

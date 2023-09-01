@@ -10,8 +10,9 @@ import { Avatar } from 'shared/ui/Avatar/Avatar'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { HTMLAttributeAnchorTarget } from 'react'
 import { RoutPath } from 'shared/config/routeConfig/routeConfig'
+import { ArticleBlockType, ArticleView } from '../../model/consts/consts'
 import {
-    Article, ArticleBlockType, ArticleTextBlock, ArticleView,
+    Article, ArticleTextBlock,
 } from '../../model/types/article'
 import cls from './ArticleListItem.module.scss'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'

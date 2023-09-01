@@ -8,6 +8,9 @@ export {
     StoreProvider,
     createReduxStore,
     StateSchema,
-    AppDispatch,
     ThunkConfig,
+}
+
+export type {
+    AppDispatch,
 }

@@ -1,5 +1,5 @@
+import { ArticleBlockType, ArticleType } from '../consts/consts'
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById'
-import { ArticleBlockType, ArticleType } from '../types/article'
 import {
     Article,
     ArticleDetailsSchema,

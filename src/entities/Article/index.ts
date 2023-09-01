@@ -2,9 +2,10 @@ export {
     ArticleDetails,
 } from './ui/ArticleDetails/ArticleDetails'
 
-export {
-    Article, ArticleView, ArticleSortField, ArticleType,
+export type {
+    Article,
 } from './model/types/article'
+
 export type { ArticleDetailsSchema } from './model/types/ArticleDetailsSchema'
 
 export { articleDetailsReducer, articleDetailsActions } from './model/slice/ArticleDetailsSlice'
@@ -16,3 +17,6 @@ export { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelecto
 export { ArticlesSortSelector } from './ui/ArticlesSortSelector/ArticlesSortSelector'
 export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs'
 export { getArticleDetailsData } from './model/selectors/articleDetails'
+export { ArticleType } from 'entities/Article/model/consts/consts'
+export { ArticleView } from 'entities/Article/model/consts/consts'
+export { ArticleSortField } from 'entities/Article/model/consts/consts'

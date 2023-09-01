@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 import { memo, useCallback, useMemo } from 'react'
 import {
-    ArticleView, ArticleViewSelector, ArticlesSortSelector, ArticleSortField, ArticleTypeTabs,
+    ArticleView, ArticleViewSelector, ArticlesSortSelector, ArticleSortField, ArticleTypeTabs, ArticleType,
 } from 'entities/Article'
 import { useSelector } from 'react-redux'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
@@ -10,7 +10,6 @@ import { Card } from 'shared/ui/Card/Card'
 import { Input } from 'shared/ui/input/Input'
 import { SortOrder } from 'shared/types'
 import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce'
-import { ArticleType } from 'entities/Article/model/types/article'
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList'
 import {
     getArticlesPageOrder, getArticlesPageSearch,
