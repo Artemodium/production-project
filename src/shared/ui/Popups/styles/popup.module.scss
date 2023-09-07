@@ -1,8 +1,8 @@
-.Dropdown {
+.popup {
     position: relative;
 }
 
-.btn {
+.trigger {
     background: none;
     outline: none;
     margin: 0;
@@ -11,24 +11,8 @@
     cursor: pointer;
 }
 
-.menu {
-    display: flex;
-    flex-direction: column;
-    background: var(--code-bg);
-    position: absolute;
-    z-index: 10000;
-    border-radius: 8px;
-    border: 1px solid var(--primary-color);
-}
-
-.item {
-    padding: 10px 25px;
-    width: 100%;
-    border: none;
-    background: none;
-    outline: none;
-    color: var(--primary-color);
-    cursor: pointer;
+.disabled {
+    opacity: 0.7;
 }
 
 .active {

@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Button } from '../Button/Button'
+import { Button } from '../../../Button/Button'
 import { Dropdown } from './Dropdown'
 
 export default {
