@@ -35,6 +35,7 @@ export function useModal(props: UseModalProps) {
             }, animationDelay)
         }
     }, [animationDelay, onClose])
+
     const onKeyDown = useCallback((e: KeyboardEvent) => {
         if (e.key === 'Escape') {
             close()
