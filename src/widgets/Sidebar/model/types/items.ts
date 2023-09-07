@@ -1,9 +1,9 @@
 import React from 'react'
-import { RoutPath } from 'shared/config/routeConfig/routeConfig'
-import AboutIcon from 'shared/assets/icons/about.svg'
-import MainIcon from 'shared/assets/icons/main.svg'
-import ProfileIcon from 'shared/assets/icons/Profile.svg'
-import ArticlesIcon from 'shared/assets/icons/articles.svg'
+import { RoutPath } from '@/shared/config/routeConfig/routeConfig'
+import AboutIcon from '@/shared/assets/icons/about.svg'
+import MainIcon from '@/shared/assets/icons/main.svg'
+import ProfileIcon from '@/shared/assets/icons/Profile.svg'
+import ArticlesIcon from '@/shared/assets/icons/articles.svg'
 
 export interface SidebarItemType {
     path: string

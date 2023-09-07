@@ -1,5 +1,5 @@
-import { TestAsyncThunk } from 'shared/lib/tests/testAsyncThunk/testAsyncThunk'
 import { useSearchParams } from 'react-router-dom'
+import { TestAsyncThunk } from '@/shared/lib/tests/testAsyncThunk/testAsyncThunk'
 import { fetchArticlesList } from '../fetchArticlesList/fetchArticlesList'
 import { initArticlesPage } from './initArticlesPage'
 

@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
-import 'app/styles/index.scss'
+import '@/app/styles/index.scss'
 import { ArticleViewSelector } from './ArticleViewSelector'
 
 export default {
