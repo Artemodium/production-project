@@ -58,6 +58,8 @@ module.exports = {
                     'div',
                     'as',
                     'border',
+                    'title',
+                    'feedbackTitle',
                 ],
             },
         ],
