@@ -17,6 +17,6 @@ export { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelecto
 export { ArticlesSortSelector } from './ui/ArticlesSortSelector/ArticlesSortSelector'
 export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs'
 export { getArticleDetailsData } from './model/selectors/articleDetails'
-export { ArticleType } from '../Article/model/consts/consts'
-export { ArticleView } from '../Article/model/consts/consts'
-export { ArticleSortField } from '../Article/model/consts/consts'
+export {
+    ArticleView, ArticleType, ArticleBlockType, ArticleSortField,
+} from '../Article/model/consts/consts'
