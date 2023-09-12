@@ -74,7 +74,13 @@ module.exports = {
         'arrow-body-style': 'off',
         semi: [2, 'never'],
         'my-path-checker-plugin/path-checker': ['error', { alias: '@' }],
-        'my-path-checker-plugin/public-api-imports': ['error', { alias: '@' }],
+        'my-path-checker-plugin/public-api-imports': [
+            'error',
+            {
+                alias: '@',
+                testFilesPatterns: ['**.*.test.*', '**/*.story*', '**/StoreDecorator.tsx'],
+            },
+        ],
     },
     globals: {
         __IS_DEV__: true,
