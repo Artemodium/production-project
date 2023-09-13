@@ -1,5 +1,4 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
-import '@/app/styles/index.scss'
 import { Text } from '../Text/Text'
 import { Card } from './Card'
 

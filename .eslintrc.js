@@ -81,6 +81,13 @@ module.exports = {
                 testFilesPatterns: ['**.*.test.*', '**/*.story*', '**/StoreDecorator.tsx'],
             },
         ],
+        'my-path-checker-plugin/layer-imports-checker': [
+            'error',
+            {
+                alias: '@',
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+            },
+        ],
     },
     globals: {
         __IS_DEV__: true,

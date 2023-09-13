@@ -1,7 +1,6 @@
 import {
     MutableRefObject, useCallback, useEffect, useRef, useState,
 } from 'react'
-import { useTheme } from '@/app/providers/ThemeProvider'
 import { Mods } from '../../../lib/classNames/classNames'
 import cls from '../../../ui/Modal/Modal.module.scss'
 

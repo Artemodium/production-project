@@ -1,5 +1,4 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
-import '@/app/styles/index.scss'
 import { Article } from '../../model/types/article'
 import { ArticleList } from './ArticleList'
 import { ArticleBlockType, ArticleType, ArticleView } from '../../model/consts/consts'

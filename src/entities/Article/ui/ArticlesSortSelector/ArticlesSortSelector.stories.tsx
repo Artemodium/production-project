@@ -1,5 +1,4 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
-import '@/app/styles/index.scss'
 import { ArticlesSortSelector } from './ArticlesSortSelector'
 
 export default {
