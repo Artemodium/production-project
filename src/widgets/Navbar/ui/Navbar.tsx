@@ -9,13 +9,11 @@ import {
     getUserAuthData, isUserAdmin, isUserManager, userActions,
 } from '@/entities/User'
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink'
-import { RoutPath } from '@/shared/config/routeConfig/routeConfig'
 import { HStack } from '@/shared/ui/Stack'
 import { NotificationButton } from '@/features/NotificationButton'
-import { NotificationList } from '@/entities/Notification'
 import { AvatarDropdown } from '@/features/AvatarDropdown'
-import { Drawer } from '@/shared/ui/Drawer/Drawer'
 import cls from './Navbar.module.scss'
+import { RoutPath } from '@/shared/const/router'
 
 interface NavbarProps {
     className?: string
