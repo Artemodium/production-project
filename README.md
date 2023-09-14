@@ -173,7 +173,7 @@ Clear.args = {
 
 ## Сущности (entities)
 
-- [Article](/src/entities/Article/README.md)
+- [Article](/src/entities/Article)
 - [Comment](/src/entities/Comment)
 - [Counter](/src/entities/Counter)
 - [Country](/src/entities/Country)
