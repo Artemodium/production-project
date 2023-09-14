@@ -1,6 +1,4 @@
-import {
-    FC, ReactNode, useMemo, useState,
-} from 'react'
+import { ReactNode, useMemo, useState } from 'react'
 import {
     ThemeContext,
 } from '../../../../shared/lib/context/ThemeContext'
