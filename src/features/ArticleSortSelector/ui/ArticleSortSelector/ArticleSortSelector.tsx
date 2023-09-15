@@ -3,8 +3,8 @@ import { memo, useMemo } from 'react'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { Select, SelectOption } from '@/shared/ui/Select'
 import { SortOrder } from '@/shared/types'
-import { ArticleSortField } from '../../model/consts/consts'
-import cls from './ArticlesSortSelector.module.scss'
+import cls from './ArticleSortSelector.module.scss'
+import { ArticleSortField } from '@/entities/Article'
 
 interface ArticlesSortSelectorProps {
     className?: string
@@ -14,7 +14,7 @@ interface ArticlesSortSelectorProps {
     onChangeSort: (newSort: ArticleSortField) => void
 }
 
-export const ArticlesSortSelector = memo((props: ArticlesSortSelectorProps) => {
+export const ArticleSortSelector = memo((props: ArticlesSortSelectorProps) => {
     const {
         className,
         sort,

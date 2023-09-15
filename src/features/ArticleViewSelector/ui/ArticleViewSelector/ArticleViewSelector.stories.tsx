@@ -1,4 +1,6 @@
-import type { ComponentMeta, ComponentStory } from '@storybook/react'
+import React from 'react'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+
 import { ArticleViewSelector } from './ArticleViewSelector'
 
 export default {
@@ -12,4 +14,6 @@ export default {
 const Template: ComponentStory<typeof ArticleViewSelector> = (args) => <ArticleViewSelector {...args} />
 
 export const Normal = Template.bind({})
-Normal.args = {}
+Normal.args = {
+
+}
