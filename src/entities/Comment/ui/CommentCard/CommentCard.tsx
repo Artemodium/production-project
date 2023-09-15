@@ -7,7 +7,7 @@ import { AppLink } from '@/shared/ui/AppLink'
 import { VStack } from '@/shared/ui/Stack'
 import { Comment } from '../../model/types/comment'
 import cls from './CommentCard.module.scss'
-import { RoutPath } from '@/shared/const/router'
+import { getRouteProfile } from '@/shared/const/router'
 
 interface CommentCardProps {
     className?: string
@@ -34,8 +34,8 @@ export const CommentCard = memo((props: CommentCardProps) => {
     }
     return (
         <VStack gap="8" max className={classNames(cls.CommentCard, [className], {})}>
-            <AppLink className={cls.header} to={`${RoutPath.profile}${comment?.user.id}`}>
-                {comment?.user.avatar ? <Avatar size={30} src={comment?.user.avatar} /> : null}
+            <AppLink className={cls.header} to={getRouteProfile(comment.user.id)}>
+                {comment?.user.avatar ? <Avatar size={30} src={comment.user.avatar} /> : null}
                 <Text className={cls.username} title={comment?.user.username} />
             </AppLink>
             <Text className={cls.text} text={comment?.text} />
