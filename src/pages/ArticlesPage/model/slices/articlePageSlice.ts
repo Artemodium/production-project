@@ -4,7 +4,7 @@ import {
 } from '@/entities/Article'
 import { StateSchema } from '@/app/providers/StoreProvider'
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from '@/shared/const/localstarage'
-import { SortOrder } from '@/shared/types'
+import { SortOrder } from '@/shared/types/sort'
 import { ArticlePageSchema } from '../../model/types/articlePageSchema'
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList'
 

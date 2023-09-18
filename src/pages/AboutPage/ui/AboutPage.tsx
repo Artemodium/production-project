@@ -10,7 +10,7 @@ const AboutPage = () => {
     }
 
     return (
-        <Page>
+        <Page data-testid="AboutPage">
             {t('О сайте')}
         </Page>
     )
