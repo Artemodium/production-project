@@ -13,7 +13,6 @@ import {
     getArticlesPageView,
 } from '../../model/selectors/ArticlesPageSelectors'
 import { getArticles } from '../../model/slices/articlePageSlice'
-import cls from './ArticleInfiniteList.module.scss'
 
 interface ArticleInfiniteListProps {
     className?: string;
@@ -42,7 +41,7 @@ export const ArticleInfiniteList = memo((props: ArticleInfiniteListProps) => {
             isLoading={isLoading}
             view={view}
             articles={articles}
-            className={cls.list}
+            className={className}
         />
     )
 })
