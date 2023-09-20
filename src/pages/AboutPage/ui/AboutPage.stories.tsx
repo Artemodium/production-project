@@ -2,6 +2,7 @@ import type { ComponentMeta, ComponentStory } from '@storybook/react'
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import AboutPage from './AboutPage'
 import { Theme } from '@/shared/const/theme'
+import { StoreProvider } from '@/app/providers/StoreProvider'
 
 export default {
     title: 'pages/AboutPage',
@@ -12,6 +13,7 @@ export default {
     args: {
         to: '/',
     },
+    decorators: [StoreProvider],
 } as ComponentMeta<typeof AboutPage>
 
 const Template: ComponentStory<typeof AboutPage> = () => <AboutPage />
