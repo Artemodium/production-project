@@ -13,7 +13,7 @@ describe('getProfileFirstname.test', () => {
         expect(getProfileFirstname(state as StateSchema)).toEqual('name')
     })
     test('should work with empty state', () => {
-        const state: DeepPartial<StateSchema> = { }
+        const state: DeepPartial<StateSchema> = {}
         expect(getProfileFirstname(state as StateSchema)).toEqual('')
     })
 })

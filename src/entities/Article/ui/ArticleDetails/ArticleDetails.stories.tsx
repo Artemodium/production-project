@@ -112,28 +112,36 @@ const article: Article = {
     ],
 }
 
-const Template: ComponentStory<typeof ArticleDetails> = (args) => <ArticleDetails {...args} />
+const Template: ComponentStory<typeof ArticleDetails> = (args) => (
+    <ArticleDetails {...args} />
+)
 
 export const Normal = Template.bind({})
 Normal.args = {}
-Normal.decorators = [StoreDecorator({
-    articleDetails: {
-        data: article,
-    },
-})]
+Normal.decorators = [
+    StoreDecorator({
+        articleDetails: {
+            data: article,
+        },
+    }),
+]
 
 export const withLoading = Template.bind({})
 withLoading.args = {}
-withLoading.decorators = [StoreDecorator({
-    articleDetails: {
-        isLoading: true,
-    },
-})]
+withLoading.decorators = [
+    StoreDecorator({
+        articleDetails: {
+            isLoading: true,
+        },
+    }),
+]
 
 export const withError = Template.bind({})
 withError.args = {}
-withError.decorators = [StoreDecorator({
-    articleDetails: {
-        error: 'error loading',
-    },
-})]
+withError.decorators = [
+    StoreDecorator({
+        articleDetails: {
+            error: 'error loading',
+        },
+    }),
+]

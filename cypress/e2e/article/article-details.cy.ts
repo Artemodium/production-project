@@ -24,7 +24,9 @@ describe('Пользователь заходит на страницу стат
         cy.getByTestId('CommentCard.Content').should('have.length', 1)
     })
     it('Доступна возможность оставить рэйтинг на С', () => {
-        cy.intercept('GET', '**/articles/*', { fixture: 'article-details.json' })
+        cy.intercept('GET', '**/articles/*', {
+            fixture: 'article-details.json',
+        })
         cy.getByTestId('ArticleDetailsInfo')
         cy.getByTestId('ArticleRating').scrollIntoView()
         cy.setRate(5, 'feedback')

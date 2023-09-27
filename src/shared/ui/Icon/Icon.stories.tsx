@@ -12,6 +12,4 @@ export default {
 const Template: ComponentStory<typeof Icon> = (args) => <Icon {...args} />
 
 export const Normal = Template.bind({})
-Normal.args = {
-
-}
+Normal.args = {}

@@ -9,11 +9,7 @@ const AboutPage = () => {
         i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru')
     }
 
-    return (
-        <Page data-testid="AboutPage">
-            {t('О сайте')}
-        </Page>
-    )
+    return <Page data-testid="AboutPage">{t('О сайте')}</Page>
 }
 
 export default AboutPage

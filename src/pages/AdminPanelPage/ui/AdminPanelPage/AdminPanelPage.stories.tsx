@@ -12,9 +12,9 @@ export default {
     decorators: [StoreProvider],
 } as ComponentMeta<typeof AdminPanelPage>
 
-const Template: ComponentStory<typeof AdminPanelPage> = (args) => <AdminPanelPage {...args} />
+const Template: ComponentStory<typeof AdminPanelPage> = (args) => (
+    <AdminPanelPage {...args} />
+)
 
 export const Normal = Template.bind({})
-Normal.args = {
-
-}
+Normal.args = {}

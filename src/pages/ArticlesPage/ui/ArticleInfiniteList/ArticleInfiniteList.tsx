@@ -15,7 +15,7 @@ import {
 import { getArticles } from '../../model/slices/articlePageSlice'
 
 interface ArticleInfiniteListProps {
-    className?: string;
+    className?: string
 }
 
 export const ArticleInfiniteList = memo((props: ArticleInfiniteListProps) => {

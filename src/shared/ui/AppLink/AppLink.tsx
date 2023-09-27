@@ -6,10 +6,10 @@ import cls from './AppLink.module.scss'
 export enum AppLinkTheme {
     PRIMARY = 'primary',
     SECONDARY = 'secondary',
-    RED = 'red'
+    RED = 'red',
 }
 
-interface AppLinkProps extends LinkProps{
+interface AppLinkProps extends LinkProps {
     className?: string
     theme?: AppLinkTheme
     children?: ReactNode

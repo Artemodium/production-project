@@ -10,9 +10,7 @@ import { useHover } from '@/shared/lib/hooks/useHover/useHover'
 import { Avatar } from '@/shared/ui/Avatar'
 import { Button, ButtonTheme } from '@/shared/ui/Button'
 import { ArticleBlockType, ArticleView } from '../../model/consts/consts'
-import {
-    Article, ArticleTextBlock,
-} from '../../model/types/article'
+import { Article, ArticleTextBlock } from '../../model/types/article'
 import cls from './ArticleListItem.module.scss'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import { getRouteArticleDetails } from '@/shared/const/router'
@@ -27,9 +25,7 @@ interface ArticleListItemProps {
 }
 
 export const ArticleListItem = (props: ArticleListItemProps) => {
-    const {
-        className, article, view, target,
-    } = props
+    const { className, article, view, target } = props
     const { t } = useTranslation()
     const [isHover, bindHover] = useHover()
     const type = <Text text={article.type.join(', ')} className={cls.types} />
@@ -41,17 +37,26 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
     )
 
     if (view === ArticleView.BIG) {
-        const textBlocks = article.blocks.find((block) => block.type === ArticleBlockType.TEXT) as ArticleTextBlock
+        const textBlocks = article.blocks.find(
+            (block) => block.type === ArticleBlockType.TEXT,
+        ) as ArticleTextBlock
 
         return (
             <div
                 data-testid="ArticleListItem"
-                className={classNames(cls.ArticleListItem, [className, cls[view]], {})}
+                className={classNames(
+                    cls.ArticleListItem,
+                    [className, cls[view]],
+                    {},
+                )}
             >
                 <Card className={cls.card}>
                     <div className={cls.header}>
                         <Avatar size={30} src={article.user.avatar} />
-                        <Text text={article.user.username} className={cls.username} />
+                        <Text
+                            text={article.user.username}
+                            className={cls.username}
+                        />
                         <Text text={article.createdAt} className={cls.date} />
                     </div>
                     <Text title={article.title} className={cls.title} />
@@ -63,7 +68,10 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
                         alt={article.title}
                     />
                     {textBlocks && (
-                        <ArticleTextBlockComponent block={textBlocks} className={cls.textBlock} />
+                        <ArticleTextBlockComponent
+                            block={textBlocks}
+                            className={cls.textBlock}
+                        />
                     )}
                     <div className={cls.footer}>
                         <AppLink
@@ -88,7 +96,11 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
             target={target}
             to={getRouteArticleDetails(article.id)}
             {...bindHover}
-            className={classNames(cls.ArticleListItem, [className, cls[view]], {})}
+            className={classNames(
+                cls.ArticleListItem,
+                [className, cls[view]],
+                {},
+            )}
         >
             <Card className={cls.card}>
                 <div className={cls.imageWrapper}>

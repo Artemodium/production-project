@@ -1,6 +1,4 @@
-import React, {
-    ErrorInfo, ReactNode, Suspense,
-} from 'react'
+import React, { ErrorInfo, ReactNode, Suspense } from 'react'
 import { PageError } from '@/widgets/PageError'
 
 interface ErrorBoundaryProps {
@@ -11,8 +9,10 @@ interface ErrorBoundaryState {
     hasError: Boolean
 }
 
-class ErrorBoundary
-    extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+class ErrorBoundary extends React.Component<
+    ErrorBoundaryProps,
+    ErrorBoundaryState
+> {
     constructor(props: ErrorBoundaryProps) {
         super(props)
         this.state = { hasError: false }
@@ -23,7 +23,7 @@ class ErrorBoundary
         return { hasError: true }
     }
 
-    componentDidCatch(error:Error, info:ErrorInfo) {
+    componentDidCatch(error: Error, info: ErrorInfo) {
         // You can also log the error to an error reporting service
     }
 
@@ -40,9 +40,7 @@ class ErrorBoundary
         }
         return (
             // eslint-disable-next-line
-            <>
-                {children}
-            </>
+            <>{children}</>
         )
     }
 }

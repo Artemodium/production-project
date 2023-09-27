@@ -31,7 +31,7 @@ describe('validateProfileData.test', () => {
         expect(result).toEqual([ValidateProfileErrors.INCORRECT_COUNTRY])
     })
     test('error multiply incorrect values', async () => {
-        const result = validateProfileData({ })
+        const result = validateProfileData({})
         expect(result).toEqual([
             ValidateProfileErrors.INCORRECT_USER_DATA,
             ValidateProfileErrors.INCORRECT_AGE,

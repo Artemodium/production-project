@@ -40,7 +40,9 @@ export const ArticleViewSelector = (props: ArticleViewSelectorProps) => {
                 >
                     <Icon
                         Svg={viewTypes.icon}
-                        className={classNames('', [], { [cls.notSelected]: viewTypes.view !== view })}
+                        className={classNames('', [], {
+                            [cls.notSelected]: viewTypes.view !== view,
+                        })}
                     />
                 </Button>
             ))}

@@ -1,8 +1,6 @@
 import React, { memo, useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import {
-    BrowserView, MobileView,
-} from 'react-device-detect'
+import { BrowserView, MobileView } from 'react-device-detect'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { Button, ButtonTheme } from '@/shared/ui/Button'
 import { Icon } from '@/shared/ui/Icon'
@@ -13,7 +11,7 @@ import { Drawer } from '@/shared/ui/Drawer'
 import cls from './NotificationButton.module.scss'
 
 interface NotificationButtonProps {
-    className?: string;
+    className?: string
 }
 
 export const NotificationButton = memo((props: NotificationButtonProps) => {
@@ -39,7 +37,11 @@ export const NotificationButton = memo((props: NotificationButtonProps) => {
         <div>
             <BrowserView>
                 <Popover
-                    className={classNames(cls.NotificationButton, [className], {})}
+                    className={classNames(
+                        cls.NotificationButton,
+                        [className],
+                        {},
+                    )}
                     direction="bottom left"
                     trigger={trigger}
                 >

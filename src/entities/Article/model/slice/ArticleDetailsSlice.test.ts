@@ -39,10 +39,12 @@ describe('ArticleDetailsSlice.test', () => {
             error: undefined,
             isLoading: false,
         }
-        expect(articleDetailsReducer(
-            state as ArticleDetailsSchema,
-            fetchArticleById.pending,
-        )).toEqual({
+        expect(
+            articleDetailsReducer(
+                state as ArticleDetailsSchema,
+                fetchArticleById.pending,
+            ),
+        ).toEqual({
             error: undefined,
             isLoading: true,
         })
@@ -52,10 +54,12 @@ describe('ArticleDetailsSlice.test', () => {
             isLoading: true,
             data: undefined,
         }
-        expect(articleDetailsReducer(
-            state as ArticleDetailsSchema,
-            fetchArticleById.fulfilled(data, '1', ''),
-        )).toEqual({
+        expect(
+            articleDetailsReducer(
+                state as ArticleDetailsSchema,
+                fetchArticleById.fulfilled(data, '1', ''),
+            ),
+        ).toEqual({
             isLoading: false,
             data,
         })
@@ -65,10 +69,12 @@ describe('ArticleDetailsSlice.test', () => {
             isLoading: true,
             error: undefined,
         }
-        expect(articleDetailsReducer(
-            state as ArticleDetailsSchema,
-            fetchArticleById.rejected,
-        )).toEqual({
+        expect(
+            articleDetailsReducer(
+                state as ArticleDetailsSchema,
+                fetchArticleById.rejected,
+            ),
+        ).toEqual({
             error: undefined,
             isLoading: false,
         })

@@ -5,13 +5,13 @@ import { Page } from '@/widgets/Page'
 import { classNames } from '@/shared/lib/classNames/classNames'
 
 interface ArticleEditPageProps {
-    className?: string;
+    className?: string
 }
 
 const ArticleEditPage = memo((props: ArticleEditPageProps) => {
     const { className } = props
     const { t } = useTranslation()
-    const { id } = useParams<{id: string}>()
+    const { id } = useParams<{ id: string }>()
     const isEdit = Boolean(id)
 
     return (

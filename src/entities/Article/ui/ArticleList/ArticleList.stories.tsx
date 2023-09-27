@@ -1,7 +1,11 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Article } from '../../model/types/article'
 import { ArticleList } from './ArticleList'
-import { ArticleBlockType, ArticleType, ArticleView } from '../../model/consts/consts'
+import {
+    ArticleBlockType,
+    ArticleType,
+    ArticleView,
+} from '../../model/consts/consts'
 
 const article: Article = {
     id: '1',
@@ -111,7 +115,9 @@ export default {
     },
 } as ComponentMeta<typeof ArticleList>
 
-const Template: ComponentStory<typeof ArticleList> = (args) => <ArticleList {...args} />
+const Template: ComponentStory<typeof ArticleList> = (args) => (
+    <ArticleList {...args} />
+)
 
 export const BigNormal = Template.bind({})
 BigNormal.args = {

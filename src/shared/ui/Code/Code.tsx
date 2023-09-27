@@ -5,7 +5,7 @@ import cls from './Code.module.scss'
 import CopyIcon from '../../assets/icons/copy-20-20.svg'
 
 interface CodeProps {
-    className?: string;
+    className?: string
     text: string
 }
 
@@ -18,12 +18,14 @@ export const Code = memo((props: CodeProps) => {
 
     return (
         <pre className={classNames(cls.Code, [className], {})}>
-            <Button className={cls.copyBtn} theme={ButtonTheme.CLEAR} onClick={onCopy}>
+            <Button
+                className={cls.copyBtn}
+                theme={ButtonTheme.CLEAR}
+                onClick={onCopy}
+            >
                 <CopyIcon className={cls.copyIcon} />
             </Button>
-            <code>
-                {text}
-            </code>
+            <code>{text}</code>
         </pre>
     )
 })

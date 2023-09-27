@@ -2,12 +2,12 @@ export enum ArticleType {
     All = 'ALL',
     IT = 'IT',
     SCINCE = 'SCIENCE',
-    ECONOMICS = 'ECONOMICS'
+    ECONOMICS = 'ECONOMICS',
 }
 
 export enum ArticleView {
     BIG = 'BIG',
-    SMALL = 'SMALL'
+    SMALL = 'SMALL',
 }
 
 export enum ArticleBlockType {

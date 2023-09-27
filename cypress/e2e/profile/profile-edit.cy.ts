@@ -18,7 +18,10 @@ describe('Пользователь заходит на страницу проф
         const newFirstname = 'newFirst'
         const newLastname = 'newLast'
         cy.updateProfile(newFirstname, newLastname)
-        cy.getByTestId('ProfileCard.firstname').should('have.value', newFirstname)
+        cy.getByTestId('ProfileCard.firstname').should(
+            'have.value',
+            newFirstname,
+        )
         cy.getByTestId('ProfileCard.lastname').should('have.value', newLastname)
     })
 })

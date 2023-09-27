@@ -6,7 +6,10 @@ import { Button, ButtonTheme } from '@/shared/ui/Button'
 import { Input } from '@/shared/ui/Input'
 import { Text, TextTheme } from '@/shared/ui/Text'
 import { ReduxStoreWithManager } from '@/app/providers/StoreProvider'
-import { DynamicModuleLoader, ReducerList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+import {
+    DynamicModuleLoader,
+    ReducerList,
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { getLoginUserName } from '../../model/selectors/getLoginUserName/getLoginUserName'
 import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword'
@@ -34,13 +37,19 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     const error = useSelector(getLoginError)
     const isLoading = useSelector(getLoginIsLoading)
 
-    const onChangeUsername = useCallback((value: string) => {
-        dispatch(loginActions.setUsername(value))
-    }, [dispatch])
+    const onChangeUsername = useCallback(
+        (value: string) => {
+            dispatch(loginActions.setUsername(value))
+        },
+        [dispatch],
+    )
 
-    const onChangePassword = useCallback((value: string) => {
-        dispatch(loginActions.setPassword(value))
-    }, [dispatch])
+    const onChangePassword = useCallback(
+        (value: string) => {
+            dispatch(loginActions.setPassword(value))
+        },
+        [dispatch],
+    )
 
     const onClick = useCallback(async () => {
         const result = await dispatch(loginByUsername({ username, password }))
@@ -50,13 +59,10 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     }, [onSuccess, dispatch, username, password])
 
     return (
-        <DynamicModuleLoader
-            reducers={initialReducers}
-            removeAfterUnmount
-        >
-            <div className={classNames(cls.LoginForm, [className], { })}>
+        <DynamicModuleLoader reducers={initialReducers} removeAfterUnmount>
+            <div className={classNames(cls.LoginForm, [className], {})}>
                 <Text title={t('Форма авторизации')} />
-                { error && <Text theme={TextTheme.ERROR} text={t('Ошибка')} /> }
+                {error && <Text theme={TextTheme.ERROR} text={t('Ошибка')} />}
                 <Input
                     autofocus
                     type="text"

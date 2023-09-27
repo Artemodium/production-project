@@ -1,6 +1,4 @@
-import {
-    memo, MutableRefObject, ReactNode, useRef, UIEvent,
-} from 'react'
+import { memo, MutableRefObject, ReactNode, useRef, UIEvent } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { classNames } from '@/shared/lib/classNames/classNames'
@@ -13,8 +11,8 @@ import { useThrottle } from '@/shared/lib/hooks/useThrottle/useThrottle'
 import cls from './Page.module.scss'
 import { TestProps } from '@/shared/types/tests'
 
-interface PageProps extends TestProps{
-    className?: string;
+interface PageProps extends TestProps {
+    className?: string
     children: ReactNode
     onScrollEnd?: () => void
 }
@@ -27,8 +25,8 @@ export const Page = memo((props: PageProps) => {
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>
     const dispatch = useAppDispatch()
     const { pathname } = useLocation()
-    const scrollPosition = useSelector(
-        (state: StateSchema) => getUIScrollByPath(state, pathname),
+    const scrollPosition = useSelector((state: StateSchema) =>
+        getUIScrollByPath(state, pathname),
     )
     useInfiniteScroll({
         triggerRef,
@@ -41,10 +39,12 @@ export const Page = memo((props: PageProps) => {
     })
 
     const onScroll = useThrottle((e: UIEvent<HTMLDivElement>) => {
-        dispatch(uiActions.setScrollPosition({
-            position: e.currentTarget.scrollTop,
-            path: pathname,
-        }))
+        dispatch(
+            uiActions.setScrollPosition({
+                position: e.currentTarget.scrollTop,
+                path: pathname,
+            }),
+        )
     }, 500)
 
     return (
@@ -56,7 +56,9 @@ export const Page = memo((props: PageProps) => {
             data-testid={props['data-testid'] ?? 'Page'}
         >
             {children}
-            {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}
+            {onScrollEnd ? (
+                <div className={cls.trigger} ref={triggerRef} />
+            ) : null}
         </main>
     )
 })

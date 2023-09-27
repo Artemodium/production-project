@@ -14,12 +14,26 @@ export const ArticleListItemSkeleton = (props: ArticleListItemProps) => {
 
     if (view === ArticleView.BIG) {
         return (
-            <div className={classNames(cls.ArticleListItem, [className, cls[view]], {})}>
+            <div
+                className={classNames(
+                    cls.ArticleListItem,
+                    [className, cls[view]],
+                    {},
+                )}
+            >
                 <Card className={cls.card}>
                     <div className={cls.header}>
                         <Skeleton width={30} height={30} border="50%" />
-                        <Skeleton width={150} height={16} className={cls.username} />
-                        <Skeleton width={150} height={16} className={cls.date} />
+                        <Skeleton
+                            width={150}
+                            height={16}
+                            className={cls.username}
+                        />
+                        <Skeleton
+                            width={150}
+                            height={16}
+                            className={cls.date}
+                        />
                     </div>
                     <Skeleton width={250} height={24} className={cls.title} />
                     <Skeleton height={200} className={cls.img} />
@@ -32,7 +46,13 @@ export const ArticleListItemSkeleton = (props: ArticleListItemProps) => {
     }
 
     return (
-        <div className={classNames(cls.ArticleListItem, [className, cls[view]], {})}>
+        <div
+            className={classNames(
+                cls.ArticleListItem,
+                [className, cls[view]],
+                {},
+            )}
+        >
             <Card className={cls.card}>
                 <div className={cls.imageWrapper}>
                     <Skeleton width={200} height={200} className={cls.img} />

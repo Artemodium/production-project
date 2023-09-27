@@ -15,11 +15,14 @@ export const useHover = () => {
     const onMouseLeave = useCallback(() => {
         setHover(false)
     }, [])
-    return useMemo(() => [
-        isHover,
-        {
-            onMouseEnter,
-            onMouseLeave,
-        },
-    ], [isHover, onMouseEnter, onMouseLeave])
+    return useMemo(
+        () => [
+            isHover,
+            {
+                onMouseEnter,
+                onMouseLeave,
+            },
+        ],
+        [isHover, onMouseEnter, onMouseLeave],
+    )
 }

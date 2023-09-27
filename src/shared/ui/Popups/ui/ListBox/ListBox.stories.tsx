@@ -8,7 +8,11 @@ export default {
         backgroundColor: { control: 'color' },
     },
     decorators: [
-        (Story) => <div style={{ padding: '100px' }}><Story /></div>,
+        (Story) => (
+            <div style={{ padding: '100px' }}>
+                <Story />
+            </div>
+        ),
     ],
 } as ComponentMeta<typeof ListBox>
 
