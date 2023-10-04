@@ -15,6 +15,8 @@ import { ArticleDetailsPageHeader } from '../../ui/ArticleDetailsPageHeader/Atic
 import { articleDetailsPageReducer } from '../../model/slices'
 import cls from './ArticleDetailsPage.module.scss'
 import { ArticleRating } from '@/features/ArticleRating'
+import { getFeatureFlag } from '@/shared/lib/features';
+import { Counter } from '@/entities/Counter';
 
 interface ArticleDetailsPageProps {
     className?: string
@@ -27,6 +29,8 @@ const reducersList: ReducerList = {
 export const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     const { t } = useTranslation('article')
     const { id } = useParams<{ id: string }>()
+    const isArticleRatingsEnabled = getFeatureFlag('isArticleRatingEnabled')
+    const isCounterEnabled = getFeatureFlag('isCounterEnabled')
 
     if (!id) {
         return null
@@ -40,7 +44,8 @@ export const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
                 <VStack gap="16" max>
                     <ArticleDetailsPageHeader />
                     <ArticleDetails id={id} />
-                    <ArticleRating articleId={id} />
+                    {isCounterEnabled && <Counter />}
+                    {isArticleRatingsEnabled && <ArticleRating articleId={id}/>}
                     <ArticleRecommendationsList />
                     <ArticleDetailsComments id={id} />
                 </VStack>

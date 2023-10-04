@@ -27,7 +27,6 @@ export const ArticlesPage = ({ className }: ArticlesPageProps) => {
     const dispatch = useAppDispatch()
 
     const data = useArticleItemById('2')
-    console.log(data)
 
     const onLoadNextPart = useCallback(() => {
         dispatch(fetchNextArticlePage())
