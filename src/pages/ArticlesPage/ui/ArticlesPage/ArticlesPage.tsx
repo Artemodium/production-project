@@ -12,6 +12,7 @@ import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters'
 import { fetchNextArticlePage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage'
 import cls from './ArticlesPage.module.scss'
 import { articlePageReducer } from '../../model/slices/articlePageSlice'
+import { useArticleItemById } from '../../model/selectors/ArticlesPageSelectors'
 
 interface ArticlesPageProps {
     className?: string
@@ -24,6 +25,9 @@ const reducers: ReducerList = {
 export const ArticlesPage = ({ className }: ArticlesPageProps) => {
     const { t } = useTranslation('article')
     const dispatch = useAppDispatch()
+
+    const data = useArticleItemById('2')
+    console.log(data)
 
     const onLoadNextPart = useCallback(() => {
         dispatch(fetchNextArticlePage())
