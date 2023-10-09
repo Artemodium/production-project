@@ -13,6 +13,7 @@ import { fetchNextArticlePage } from '../../model/services/fetchNextArticlesPage
 import cls from './ArticlesPage.module.scss'
 import { articlePageReducer } from '../../model/slices/articlePageSlice'
 import { useArticleItemById } from '../../model/selectors/ArticlesPageSelectors'
+import { ArticlePageGreeting } from '@/features/articlePageGreeting';
 
 interface ArticlesPageProps {
     className?: string
@@ -41,6 +42,7 @@ export const ArticlesPage = ({ className }: ArticlesPageProps) => {
             >
                 <ArticlesPageFilters className={cls.listBottom} />
                 <ArticleInfiniteList className={cls.list} />
+                <ArticlePageGreeting />
             </Page>
         </DynamicModuleLoader>
     )

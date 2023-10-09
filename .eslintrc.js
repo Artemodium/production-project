@@ -61,6 +61,8 @@ module.exports = {
                     'border',
                     'direction',
                     'gap',
+                    'title',
+                    'text',
                 ],
             },
         ],
