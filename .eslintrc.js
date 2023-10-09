@@ -63,6 +63,7 @@ module.exports = {
                     'gap',
                     'title',
                     'text',
+                    'feature',
                 ],
             },
         ],
