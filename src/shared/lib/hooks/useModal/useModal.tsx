@@ -6,7 +6,7 @@ import {
     useState,
 } from 'react'
 import { Mods } from '../../../lib/classNames/classNames'
-import cls from '../../../ui/Modal/Modal.module.scss'
+import cls from '../../../ui/depricated/Modal/Modal.module.scss'
 
 interface UseModalProps {
     onClose?: () => void
