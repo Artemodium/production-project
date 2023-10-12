@@ -6,13 +6,13 @@ import { classNames } from '@/shared/lib/classNames/classNames'
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { Currency } from '@/entities/Currency'
 import { Country } from '@/entities/Country'
-import { Text, TextTheme } from '@/shared/ui/depricated/Text'
+import { Text, TextTheme } from '@/shared/ui/deprecated/Text'
 import { ProfileCard } from '@/entities/Profile'
 import {
     DynamicModuleLoader,
     ReducerList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
-import { VStack } from '@/shared/ui/depricated/Stack'
+import { VStack } from '@/shared/ui/deprecated/Stack'
 import { ValidateProfileErrors } from '../../model/consts/consts'
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader'
 import { profileActions, profileReducer } from '../../model/slice/ProfileSlice'
