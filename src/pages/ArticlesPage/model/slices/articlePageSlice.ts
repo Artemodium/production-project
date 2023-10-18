@@ -5,9 +5,9 @@ import {
 } from '@reduxjs/toolkit'
 import {
     Article,
+    ArticleSortField,
     ArticleType,
     ArticleView,
-    ArticleSortField,
 } from '@/entities/Article'
 import { StateSchema } from '@/app/providers/StoreProvider'
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from '@/shared/const/localstorage'
@@ -38,7 +38,7 @@ export const articlePageSlice = createSlice({
         sort: ArticleSortField.CREATED,
         search: '',
         order: 'asc',
-        type: ArticleType.All,
+        type: ArticleType.ALL,
     }),
     reducers: {
         setView: (state, action: PayloadAction<ArticleView>) => {

@@ -3,7 +3,7 @@ import { MutableRefObject, useEffect, useRef } from 'react'
 export interface UseInfiniteScrollOptions {
     callback?: () => void
     triggerRef: MutableRefObject<HTMLElement>
-    wrapperRef: MutableRefObject<HTMLElement>
+    wrapperRef?: MutableRefObject<HTMLElement>
 }
 
 export function useInfiniteScroll({
@@ -15,7 +15,7 @@ export function useInfiniteScroll({
 
     // eslint-disable-next-line consistent-return
     useEffect(() => {
-        const wrapperElement = wrapperRef.current
+        const wrapperElement = wrapperRef?.current || null
         const triggerElement = triggerRef.current
         if (callback) {
             const options = {

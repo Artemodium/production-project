@@ -1,4 +1,4 @@
-import { memo, MutableRefObject, ReactNode, useRef, UIEvent } from 'react'
+import { memo, MutableRefObject, ReactNode, UIEvent, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { classNames } from '@/shared/lib/classNames/classNames'
@@ -29,9 +29,14 @@ export const Page = memo((props: PageProps) => {
     const scrollPosition = useSelector((state: StateSchema) =>
         getUIScrollByPath(state, pathname),
     )
+
     useInfiniteScroll({
         triggerRef,
-        wrapperRef,
+        wrapperRef: toggleFeatures({
+            name: 'isAppRedesigned',
+            on: () => undefined,
+            off: () => wrapperRef,
+        }),
         callback: onScrollEnd,
     })
 
